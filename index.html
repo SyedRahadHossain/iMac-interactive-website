@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     />
   </head>
+
   <body>
     <main>
       <section>
@@ -32,83 +33,127 @@
 
               <!-- memory -->
               <h5 class="mt-5">Memory</h5>
-              <button id="memory-8gb" type="button" class="btn btn-outline-dark">
+              <button
+                id="memory-8gb"
+                type="button"
+                class="btn btn-outline-dark"
+              >
                 8GB unified memory
               </button>
-              <button id="memory-16gb" type="button" class="btn btn-outline-dark">
+              <button
+                id="memory-16gb"
+                type="button"
+                class="btn btn-outline-dark"
+              >
                 16GB unified memory
               </button>
 
               <!-- storage -->
               <h5 class="mt-5">Storage</h5>
-              <button id="storage-256gb" type="button" class="btn btn-outline-dark">
+              <button
+                id="storage-256gb"
+                type="button"
+                class="btn btn-outline-dark"
+              >
                 256GB SSD storage
               </button>
-              <button id="storage-512gb" type="button" class="btn btn-outline-dark">
+              <button
+                id="storage-512gb"
+                type="button"
+                class="btn btn-outline-dark"
+              >
                 512GB SSD storage
               </button>
-              <button id="storage-1tb" type="button" class="btn btn-outline-dark">
+              <button
+                id="storage-1tb"
+                type="button"
+                class="btn btn-outline-dark"
+              >
                 1TB SSD storage
               </button>
 
               <!-- delivery option -->
               <h5 class="mt-5">Choose your delivery option</h5>
-              <button id="delivery-free" type="button" class="btn btn-outline-dark">
+              <button
+                id="delivery-free"
+                type="button"
+                class="btn btn-outline-dark"
+              >
                 Friday, Aug 25 FREE Prime Delivery
               </button>
-              <button id="delivery-withCharge" type="button" class="btn btn-outline-dark">
+              <button
+                id="delivery-withCharge"
+                type="button"
+                class="btn btn-outline-dark"
+              >
                 Friday, Aug 21 Delivery charge $20
               </button>
 
               <!-- calculation part -->
-           <div class="col-md-8 mt-5">
-            <table class="table fw-bold fs-5">
-                <tbody>
-                  <tr>
-                    <td>Best Price </td>
-                    <td class="text-start">$<span id="best-price">1299</span></td>
-                  </tr>
-                  <tr>
-                    <td >Extra Memory Cost</td>
-                    <td class="text-start">$<span id="memory-cost">0</span></td>
-                  </tr>
-                  <tr>
-                    <td >Extra Storage Cost</td>
-                    <td class="text-start">$<span id="storage-cost">0</span></td>
-                  </tr>
-                  <tr>
-                    <td >Delivery Charge</td>
-                    <td class="text-start">$<span id="delivery-charge">0</span></td>
-                  </tr>
+              <div class="col-md-8 mt-5">
+                <table class="table fw-bold fs-5">
+                  <tbody>
+                    <tr>
+                      <td>Best Price</td>
+                      <td class="text-start">
+                        $<span id="best-price">1299</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Extra Memory Cost</td>
+                      <td class="text-start">
+                        $<span id="memory-cost">0</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Extra Storage Cost</td>
+                      <td class="text-start">
+                        $<span id="storage-cost">0</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Delivery Charge</td>
+                      <td class="text-start">
+                        $<span id="delivery-charge">0</span>
+                      </td>
+                    </tr>
+                  </tbody>
                   <tfoot>
-                    <td >Total Price</td>
-                    <td class="text-start">$<span id="total-price">1299</span></td>
+                    <td>Total Price</td>
+                    <td class="text-start">
+                      $<span id="total-price">1299</span>
+                    </td>
                   </tfoot>
-                </tbody>
-              </table>
-              <h5  class="mt-4">Add Promo Code</h5>
-              <div class="d-flex">
-                <input id="promo-code" type="text" class="form-control" placeholder="promo code">
-                <button id="promo-codeApplyBtn" type="button" class="btn btn-danger">Apply</button>
+                </table>
+                <h5 class="mt-4">Add Promo Code</h5>
+                <div class="d-flex">
+                  <input
+                    id="promo-code"
+                    type="text"
+                    class="form-control"
+                    placeholder="promo code"
+                  />
+                  <button
+                    id="promo-codeApplyBtn"
+                    type="button"
+                    class="btn btn-danger"
+                  >
+                    Apply
+                  </button>
+                </div>
               </div>
             </div>
-            </div>
           </div>
-          <hr>
+          <hr />
         </div>
       </section>
+      <!-- bottom -->
       <section class="container">
-          <h1 class="text-center">Total $<span id="total-priceBottom">1299</span></h1>
+        <h1 class="text-center">
+          Total $<span id="total-priceBottom">1299</span>
+        </h1>
       </section>
     </main>
-
-    <!-- bootstrap JS link  -->
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script> -->
-
     <script src="js/app.js"></script>
   </body>
 </html>
