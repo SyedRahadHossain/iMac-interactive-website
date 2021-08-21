@@ -31,7 +31,6 @@ document.getElementById('storage-1tb').addEventListener('click', function () {
 document.getElementById('delivery-free').addEventListener('click', function () {
     const deliveryFree = document.getElementById('delivery-charge');
     deliveryFree.innerText = 0;
-
     totalPrice();
 })
 document.getElementById('delivery-withCharge').addEventListener('click', function () {
