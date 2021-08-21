@@ -36,19 +36,18 @@ document.getElementById('delivery-free').addEventListener('click', function () {
 document.getElementById('delivery-withCharge').addEventListener('click', function () {
     const deliveryWithCharge = document.getElementById('delivery-charge');
     deliveryWithCharge.innerText = 20;
-
     totalPrice();
 })
 
 // apply promo code button
 document.getElementById('promo-codeApplyBtn').addEventListener('click', function () {
-    const inputText = document.getElementById('promo-code').value
-    if (inputText == 'stevekaku') {
+    const inputText = document.getElementById('promo-code').value;
+    if (inputText.toLowerCase() == 'stevekaku') {
         promoCode();
     }
 })
 
-// total price
+// total price calculation
 function totalPrice() {
     const bestPrice = parseFloat(document.getElementById('best-price').innerText);
     const memoryCost = parseFloat(document.getElementById('memory-cost').innerText);
@@ -61,11 +60,12 @@ function totalPrice() {
     document.getElementById('total-priceBottom').innerText = totalPrice;
 }
 
-// promo code
+// after adding promo code calculation 
 function promoCode() {
     const previousTotalPrice = parseFloat(document.getElementById('total-price').innerText);
     // 20 percent discount by using promo code
     const newTotalPrice = previousTotalPrice - (.2 * previousTotalPrice);
     document.getElementById('total-priceBottom').innerText = newTotalPrice;
+    //clearing promo code field
     document.getElementById('promo-code').value = '';
 }
