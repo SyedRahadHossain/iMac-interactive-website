@@ -1,3 +1,26 @@
+// total price calculation
+function totalPrice() {
+    const bestPrice = parseFloat(document.getElementById('best-price').innerText);
+    const memoryCost = parseFloat(document.getElementById('memory-cost').innerText);
+    const storageCost = parseFloat(document.getElementById('storage-cost').innerText);
+    const deliveryCharge = parseFloat(document.getElementById('delivery-charge').innerText);
+    // calculating total 
+    const totalPrice = bestPrice + memoryCost + storageCost + deliveryCharge;
+
+    document.getElementById('total-price').innerText = totalPrice;
+    document.getElementById('total-priceBottom').innerText = totalPrice;
+}
+
+// after adding promo code calculation 
+function promoCode() {
+    const previousTotalPrice = parseFloat(document.getElementById('total-price').innerText);
+    // 20 percent discount by using promo code
+    const newTotalPrice = previousTotalPrice - (.2 * previousTotalPrice);
+    document.getElementById('total-priceBottom').innerText = newTotalPrice;
+    //clearing promo code field
+    document.getElementById('promo-code').value = '';
+}
+
 // memory option
 document.getElementById('memory-8gb').addEventListener('click', function () {
     const memory8Gb = document.getElementById('memory-cost');
@@ -46,26 +69,3 @@ document.getElementById('promo-codeApplyBtn').addEventListener('click', function
         promoCode();
     }
 })
-
-// total price calculation
-function totalPrice() {
-    const bestPrice = parseFloat(document.getElementById('best-price').innerText);
-    const memoryCost = parseFloat(document.getElementById('memory-cost').innerText);
-    const storageCost = parseFloat(document.getElementById('storage-cost').innerText);
-    const deliveryCharge = parseFloat(document.getElementById('delivery-charge').innerText);
-    // calculating total 
-    const totalPrice = bestPrice + memoryCost + storageCost + deliveryCharge;
-
-    document.getElementById('total-price').innerText = totalPrice;
-    document.getElementById('total-priceBottom').innerText = totalPrice;
-}
-
-// after adding promo code calculation 
-function promoCode() {
-    const previousTotalPrice = parseFloat(document.getElementById('total-price').innerText);
-    // 20 percent discount by using promo code
-    const newTotalPrice = previousTotalPrice - (.2 * previousTotalPrice);
-    document.getElementById('total-priceBottom').innerText = newTotalPrice;
-    //clearing promo code field
-    document.getElementById('promo-code').value = '';
-}
