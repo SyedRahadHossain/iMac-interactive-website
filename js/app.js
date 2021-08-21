@@ -1,4 +1,4 @@
-// memory
+// memory option
 document.getElementById('memory-8gb').addEventListener('click', function () {
     const memory8Gb = document.getElementById('memory-cost');
     memory8Gb.innerText = 0;
@@ -10,7 +10,7 @@ document.getElementById('memory-16gb').addEventListener('click', function () {
     totalPrice();
 })
 
-// storage
+// storage option
 document.getElementById('storage-256gb').addEventListener('click', function () {
     const storage256Gb = document.getElementById('storage-cost');
     storage256Gb.innerText = 0;
@@ -27,7 +27,7 @@ document.getElementById('storage-1tb').addEventListener('click', function () {
     totalPrice();
 })
 
-// delivery
+// delivery option
 document.getElementById('delivery-free').addEventListener('click', function () {
     const deliveryFree = document.getElementById('delivery-charge');
     deliveryFree.innerText = 0;
@@ -41,14 +41,12 @@ document.getElementById('delivery-withCharge').addEventListener('click', functio
     totalPrice();
 })
 
-// apply promo code
+// apply promo code button
 document.getElementById('promo-codeApplyBtn').addEventListener('click', function () {
     const inputText = document.getElementById('promo-code').value
     if (inputText == 'stevekaku') {
         promoCode();
     }
-
-
 })
 
 // total price
@@ -69,7 +67,6 @@ function promoCode() {
     const previousTotalPrice = parseFloat(document.getElementById('total-price').innerText);
     // 20 percent discount by using promo code
     const newTotalPrice = previousTotalPrice - (.2 * previousTotalPrice);
-    document.getElementById('total-price').innerText = newTotalPrice;
     document.getElementById('total-priceBottom').innerText = newTotalPrice;
     document.getElementById('promo-code').value = '';
 }
